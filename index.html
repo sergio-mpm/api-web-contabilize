@@ -13,7 +13,11 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success d-none" id="mainNavbar">
         <div class="container">
-            <a class="navbar-brand" href="#">Contabilize API</a>
+            <a class="navbar-brand" href="#">
+                <img src="img/dollar-icon-transparent.png" alt="Logo"
+                    style="height: 32px; width:auto; margin-right: 8px;">
+                Contabilize API
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,7 +35,7 @@
 
         <!-- LOGIN -->
         <div id="loginView" class="card p-4 col-md-4 mx-auto">
-            <img src="img/dollar-icon.png" alt="Contabilize" />
+            <img src="img/dollar-icon-transparent.png" alt="Contabilize" />
             <h4>Login</h4>
             <input id="loginUser" class="form-control mb-2" placeholder="Nome">
             <input id="loginCpf" class="form-control mb-2" placeholder="CPF" type="number">
@@ -70,6 +74,7 @@
                     <option>Lazer</option>
                     <option>Outros</option>
                 </select>
+                <input id="responsavel" class="form-control mb-2" placeholder="Responsável">
                 <button class="btn btn-success" onclick="addDespesa()">Salvar</button>
             </div>
 
@@ -102,7 +107,7 @@
             <ul id="lista" class="list-group mb-3"></ul>
 
             <!-- TOTAL GERAL -->
-            <div class="alert alert-info">
+            <div class="alert alert-danger">
                 Total Geral: R$ <strong><span id="total">0.00</span></strong>
             </div>
 
