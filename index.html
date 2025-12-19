@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Contabilize - Controle de Gastos</title>
+    <title>Contabilize API</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +16,7 @@
             <a class="navbar-brand" href="#">
                 <img src="img/dollar-icon-transparent.png" alt="Logo"
                     style="height: 32px; width:auto; margin-right: 8px;">
-                Contabilize API
+                Contabilize - Controle de Gastos
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
             <img src="img/dollar-icon-transparent.png" alt="Contabilize" />
             <h4>Login</h4>
             <input id="loginUser" class="form-control mb-2" placeholder="Nome">
-            <input id="loginCpf" class="form-control mb-2" placeholder="CPF" type="number">
+            <input id="loginCpf" class="form-control mb-2" placeholder="CPF">
 
             <div class="d-grid gap-2">
                 <button class="btn btn-primary" onclick="login()">Entrar</button>
@@ -50,7 +50,9 @@
                 <hr>
                 <h6>Novo Usuário</h6>
                 <input id="registerUser" class="form-control mb-2" placeholder="Nome">
-                <input id="registerCpf" class="form-control mb-2" placeholder="CPF" type="number">
+                <input id="registerCpf" class="form-control mb-2" placeholder="CPF">
+                <input id="registerEmail" class="form-control mb-2" placeholder="E-mail">
+                <input id="registerDataNasc" class="form-control mb-2" placeholder="Data de Nascimento" type="date">
                 <button class="btn btn-success w-100" onclick="register()">Cadastrar</button>
             </div>
         </div>
@@ -72,6 +74,7 @@
                     <option>Alimentação</option>
                     <option>Transporte</option>
                     <option>Lazer</option>
+                    <option>Contas de casa</option>
                     <option>Outros</option>
                 </select>
                 <input id="responsavel" class="form-control mb-2" placeholder="Responsável">

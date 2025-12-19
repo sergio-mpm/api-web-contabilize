@@ -41,19 +41,23 @@ function login() {
 function register() {
     const user = document.getElementById('registerUser').value;
     const cpf = document.getElementById('registerCpf').value;
+    const email = document.getElementById('registerEmail').value;
+    const dataNascimento = document.getElementById('registerDataNasc').value
 
     if (!user || !cpf) return alert('Informe nome e CPF');
 
     fetch('http://localhost:5000/usuarios', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome: user, cpf: parseInt(cpf) })
+        body: JSON.stringify({ nome: user, cpf: cpf, email: email, dataNascimento: dataNascimento })
     })
     .then(res => {
         if (!res.ok) throw new Error('Usuário já existe');
         alert('Usuário criado com sucesso');
         document.getElementById('registerUser').value = '';
         document.getElementById('registerCpf').value = '';
+        document.getElementById('registerEmail').value = '';
+        document.getElementById('registerDataNasc').value = '';
         toggleRegister();
     })
     .catch(err => alert(err.message));
