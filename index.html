@@ -26,6 +26,7 @@
                     <li class="nav-item"><a class="nav-link" href="#appView">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="#formTitle">Nova Despesa</a></li>
                     <li class="nav-item"><a class="nav-link" href="#lista">Lista de Despesas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#listaUsuarios">Usuarios</a></li>
                 </ul>
             </div>
         </div>
@@ -68,17 +69,19 @@
             <!-- FORM DESPESA -->
             <div class="card p-3 mb-3">
                 <h5 id="formTitle">Nova Despesa</h5>
-                <input id="desc" class="form-control mb-2" placeholder="Descrição">
-                <input id="valor" type="number" class="form-control mb-2" placeholder="Valor">
-                <select id="tipo" class="form-control mb-2">
+                <input id="despesaDescricao" class="form-control mb-2" placeholder="Descrição">
+                <input id="despesaValor" type="number" class="form-control mb-2" placeholder="Valor">
+                <select id="despesaTipo" class="form-control mb-2">
                     <option>Alimentação</option>
                     <option>Transporte</option>
                     <option>Lazer</option>
                     <option>Contas de casa</option>
                     <option>Outros</option>
                 </select>
-                <input id="responsavel" class="form-control mb-2" placeholder="Responsável">
-                <button class="btn btn-success" onclick="addDespesa()">Salvar</button>
+                <input id="despesaResponsavel" class="form-control mb-2" placeholder="Responsável">
+                <input id="despesaData" type="date" class="form-control mb-2" placeholder="Data Despesa">
+                <textarea id="despesaComentario" class="form-control mb-2" placeholder="Comentário" rows="4"></textarea>
+                <button id="despesaFormButton" class="btn btn-success" onclick="addDespesa()">Salvar</button>
             </div>
 
             <!-- DASHBOARD -->
@@ -113,6 +116,23 @@
             <div class="alert alert-danger">
                 Total Geral: R$ <strong><span id="total">0.00</span></strong>
             </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3>Gestão de Usuários</h3>
+            </div>
+
+            <!-- FORM USUARIOS-->
+            <div class="card p-3 mb-3">
+                <h5>Adicionar/Atualizar Usuário</h5>
+                <input id="usuarioNome" class="form-control mb-2" placeholder="Nome">
+                <input id="usuarioCpf" class="form-control mb-2" placeholder="CPF">
+                <input id="usuarioEmail" class="form-control mb-2" placeholder="E-mail">
+                <input id="usuarioData" type="date" class="form-control mb-2" placeholder="Data Nascimento">
+                <button class="btn btn-success" onclick="salvarUsuario()">Salvar</button>
+            </div>
+
+            <!-- LISTA DE USUÁRIOS -->
+            <ul id="listaUsuarios" class="list-group mb-3"></ul>
 
         </div>
     </div>

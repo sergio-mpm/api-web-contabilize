@@ -109,6 +109,38 @@ input.form-control, select.form-select {
     border-radius: 5px;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px; /* largura do tooltip */
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.85rem;
+    white-space: pre-wrap; /* quebra de linha no texto */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 /* ================= MEDIA QUERY ================= */
 @media (max-width: 576px) {
     #loginView {
